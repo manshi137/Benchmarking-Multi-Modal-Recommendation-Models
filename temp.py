@@ -7,32 +7,32 @@ import random
 import csv
 
 
-inputcsv = 'u.csv'
+inputcsv = 'data/baby/u_id_mapping.csv'
 
 # List to store the data
 data_array = []
-headers = ["userID",  "itemID",  "rating",  "timestamp",   "x_label"]
-data_array.append(headers)
+# headers = ["userID",  "itemID",  "rating",  "timestamp",   "x_label"]
+# data_array.append(headers)
 
 # Reading data from the CSV file
 with open(inputcsv, mode='r') as file:
     reader = csv.reader(file, delimiter='\t')
     for row in reader:
-        row.append(random.randint(0, 1000)%3)
+        # row.append(random.randint(0, 1000)%3)
         data_array.append(row)
 
 # Display the data
-for row in data_array:
-    print(row)
+# for row in data_array:
+#     print(row)
 
 
-outputcsv = 'ml100k.inter'
+outputcsv = 'data/ml100k/u_id_mapping.csv'
 
 # Writing data to the CSV file
 with open(outputcsv, mode='w', newline='') as file:
     writer = csv.writer(file, delimiter='\t')
-    for row in data_array:
-        writer.writerow(row)
+    for i in range(945):
+        writer.writerow(data_array[i])
 
 print(f'Data has been written to {outputcsv}.')
 
