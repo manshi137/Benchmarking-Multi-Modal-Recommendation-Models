@@ -1,7 +1,35 @@
+# import csv
+# import torch
+# import numpy as np
+# import random
+
+
 import csv
-import torch
-import numpy as np
-import random
+
+file_path = 'items.csv'
+file = open(file_path, encoding="utf8")
+
+data_reader = csv.reader(file)
+data = [row for row in data_reader]
+
+id2name = {}
+moviedesc = []
+movie_names = []
+
+
+for i in range(1, len(data)):
+    movie_names.append(data[i][5])
+    # print({i-1}, {data[i][5]})
+
+for i in range(len(movie_names)):
+    movie_names[i] = movie_names[i].strip()
+    movie_names[i] = movie_names[i][:-6]
+    movie_names[i] = movie_names[i].strip()
+
+for i in range(len(movie_names)):
+    id2name[i] = str(i)+"_"+movie_names[i]
+print(id2name)
+
 
 # file_path = 'items.csv'
 
@@ -56,22 +84,22 @@ import random
 
 
 # Data to be added in the new column
-x_label = []
-for i in range(100000):
-    x_label.append(random.randint(0, 1000)%3)
+# x_label = []
+# for i in range(100000):
+#     x_label.append(random.randint(0, 1000)%3)
  
-input_file = "u.csv"
-output_file = "ml100kinter.csv"
+# input_file = "u.csv"
+# output_file = "ml100kinter.csv"
 
-# Data to be added in the new column
-# new_column_data = ['new_value1', 'new_value2', 'new_value3']  # Replace these with your desired values
+# # Data to be added in the new column
+# # new_column_data = ['new_value1', 'new_value2', 'new_value3']  # Replace these with your desired values
 
-# Read the existing CSV file and add the new column
-with open(input_file, 'r', newline='') as infile, open(output_file, 'w', newline='') as outfile:
-    reader = csv.reader(infile, delimiter='\t')
-    writer = csv.writer(outfile, delimiter='\t')
+# # Read the existing CSV file and add the new column
+# with open(input_file, 'r', newline='') as infile, open(output_file, 'w', newline='') as outfile:
+#     reader = csv.reader(infile, delimiter='\t')
+#     writer = csv.writer(outfile, delimiter='\t')
     
-    # Iterate through the rows and add the new column
-    for row, new_value in zip(reader, x_label):
-        row.append(new_value)
-        writer.writerow(row)
+#     # Iterate through the rows and add the new column
+#     for row, new_value in zip(reader, x_label):
+#         row.append(new_value)
+#         writer.writerow(row)
