@@ -1,34 +1,65 @@
 # import csv
 # import torch
 # import numpy as np
-# import random
+import random
 
 
 import csv
 
-file_path = 'items.csv'
-file = open(file_path, encoding="utf8")
 
-data_reader = csv.reader(file)
-data = [row for row in data_reader]
+inputcsv = 'u.csv'
 
-id2name = {}
-moviedesc = []
-movie_names = []
+# List to store the data
+data_array = []
+headers = ["userID",  "itemID",  "rating",  "timestamp",   "x_label"]
+data_array.append(headers)
+
+# Reading data from the CSV file
+with open(inputcsv, mode='r') as file:
+    reader = csv.reader(file, delimiter='\t')
+    for row in reader:
+        row.append(random.randint(0, 1000)%3)
+        data_array.append(row)
+
+# Display the data
+for row in data_array:
+    print(row)
 
 
-for i in range(1, len(data)):
-    movie_names.append(data[i][5])
-    # print({i-1}, {data[i][5]})
+outputcsv = 'ml100k.inter'
 
-for i in range(len(movie_names)):
-    movie_names[i] = movie_names[i].strip()
-    movie_names[i] = movie_names[i][:-6]
-    movie_names[i] = movie_names[i].strip()
+# Writing data to the CSV file
+with open(outputcsv, mode='w', newline='') as file:
+    writer = csv.writer(file, delimiter='\t')
+    for row in data_array:
+        writer.writerow(row)
 
-for i in range(len(movie_names)):
-    id2name[i] = str(i)+"_"+movie_names[i]
-print(id2name)
+print(f'Data has been written to {outputcsv}.')
+
+
+# file_path = 'items.csv'
+# file = open(file_path, encoding="utf8")
+
+# data_reader = csv.reader(file)
+# data = [row for row in data_reader]
+
+# id2name = {}
+# moviedesc = []
+# movie_names = []
+
+
+# for i in range(1, len(data)):
+#     movie_names.append(data[i][5])
+#     # print({i-1}, {data[i][5]})
+
+# for i in range(len(movie_names)):
+#     movie_names[i] = movie_names[i].strip()
+#     movie_names[i] = movie_names[i][:-6]
+#     movie_names[i] = movie_names[i].strip()
+
+# for i in range(len(movie_names)):
+#     id2name[i] = str(i)+"_"+movie_names[i]
+# print(id2name)
 
 
 # file_path = 'items.csv'
