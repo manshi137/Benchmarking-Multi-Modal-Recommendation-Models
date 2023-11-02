@@ -171,7 +171,8 @@ class DualGNN(GeneralRecommender):
         ############################################ multi-modal information aggregation
         h_u1 = self.user_graph(user_rep, self.epoch_user_graph, self.user_weight_matrix)
         user_rep = user_rep + h_u1
-        self.result_embed = torch.cat((user_rep, item_rep), dim=0)
+        # self.result_embed = torch.cat((user_rep, item_rep), dim=0)
+        self.result_embed= torch.nn.Parameter(torch.cat((user_rep, item_rep), dim=0))
         user_tensor = self.result_embed[user_nodes]
         pos_item_tensor = self.result_embed[pos_item_nodes]
         neg_item_tensor = self.result_embed[neg_item_nodes]
