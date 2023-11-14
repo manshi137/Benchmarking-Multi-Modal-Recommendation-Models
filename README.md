@@ -1,8 +1,12 @@
-# COL865_MMRS
+## Overview
+This project provides a comprehensive exploration of multimodal recommendation models on Enhanced Movielens 100k Dataset, delving into their underlying technologies, benchmarking their performance using MMRec Tooblbox, and shedding light on their potential applications across diverse domains.
 
-## Conda Environment
+## Requirements
 Create a conda environment using the 'requirements.txt' file
 
+    conda create --name myenv --file requirements.txt
+    conda activate myenv
+    
 ## How to run
 Go to 'mmrec_toolbox/src/'
 
@@ -22,13 +26,13 @@ MODEL_NAME:
 ## Log files
 Log files are stored in 'mmrec_toolbox/src/log/'
 
-## i_id_mapping
+### i_id_mapping
 Movie Name to ItemId mapping
 
-## u_id_mapping
+### u_id_mapping
 Original UserId to new 0-indexed UserId mapping
 
-## ml100k.inter 
+### ml100k.inter 
 x_label = 0 for Training
 
 x_label = 1 for Valid
@@ -36,10 +40,10 @@ x_label = 1 for Valid
 x_label = 2 for Test
 
 
-## image_feat.npy
+### image_feat.npy
 Image embeddings generated using resnet.ipynb
 
-## text_feat.npy
+### text_feat.npy
 Text embeddings generated using bert.ipynb
 
 
