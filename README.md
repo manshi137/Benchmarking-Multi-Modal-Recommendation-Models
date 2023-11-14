@@ -33,6 +33,8 @@ This file contains `Movie Name` -> `ItemId` mapping
 This file contains `Original UserId` -> `new 0-indexed UserId` mapping
 
 ### ml100k.inter 
+This file contains user-item interaction data. There are 5 columns which represent userID, itemID, rating, timestamp and x_label (in order).
+
 x_label = 0 for Training
 
 x_label = 1 for Validation
