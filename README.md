@@ -29,8 +29,11 @@ Original UserId to new 0-indexed UserId mapping
 
 ## ml100k.inter 
 x_label = 0 for Training
+
 x_label = 1 for Valid
+
 x_label = 2 for Test
+
 
 ## image_feat.npy
 Image embeddings generated using resnet.ipynb
