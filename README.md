@@ -4,8 +4,8 @@ This project provides a comprehensive exploration of multimodal recommendation m
 ## Requirements
 Create a conda environment using the `requirements.txt` file
 
-    conda create --name myenv --file requirements.txt
-    conda activate myenv
+    conda create --name mmrm --file requirements.txt
+    conda activate mmrm
     
 ## How to run
 Go to `mmrec_toolbox/src/`
