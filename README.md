@@ -10,9 +10,9 @@ Create a conda environment using the `requirements.txt` file
 ## How to run
 Go to `mmrec_toolbox/src/`
 
-Use the command:
+Run the command:
 
-    `python main.py -m {MODEL_NAME} -d ml100k`
+    python main.py -m {MODEL_NAME} -d ml100k
 
 MODEL_NAME:
 - BM3
@@ -39,12 +39,13 @@ x_label = 1 for Validation
 
 x_label = 2 for Test
 
-
 ### image_feat.npy
-Image embeddings generated using resnet.ipynb
+[Movie Posters](https://drive.google.com/drive/folders/1Q68gqkIb6aW5HwtQu6--NxTf92i2TZhK?usp=sharing) used here are extracted using a web-scraper.
+
+Image embeddings generated using `resnet.ipynb`
 
 ### text_feat.npy
-Text embeddings generated using bert.ipynb
+Text embeddings generated using `bert.ipynb`
 
 
 ## Bechmarked Models
