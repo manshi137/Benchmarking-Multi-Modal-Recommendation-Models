@@ -49,7 +49,6 @@ Text embeddings generated using `bert.ipynb`
 
 
 ## Bechmarked Models
-source code at: `src\models`
 
 | **Model**       | **Paper**                                                                                             | **Conference/Journal** | **Code**    |
 |------------------|--------------------------------------------------------------------------------------------------------|------------------------|-------------|
