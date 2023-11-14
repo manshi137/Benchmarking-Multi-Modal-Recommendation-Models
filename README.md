@@ -27,10 +27,10 @@ MODEL_NAME:
 Log files are stored in `mmrec_toolbox/src/log/`
 
 ### i_id_mapping
-Movie Name to ItemId mapping
+This file contains `Movie Name` -> `ItemId` mapping
 
 ### u_id_mapping
-Original UserId to new 0-indexed UserId mapping
+This file contains `Original UserId` -> `new 0-indexed UserId` mapping
 
 ### ml100k.inter 
 x_label = 0 for Training
@@ -42,13 +42,13 @@ x_label = 2 for Test
 ### image_feat.npy
 [Movie Posters](https://drive.google.com/drive/folders/1Q68gqkIb6aW5HwtQu6--NxTf92i2TZhK?usp=sharing) used here are extracted using a web-scraper.
 
-Image embeddings generated using `resnet.ipynb`
+This file contains image embeddings generated using `resnet.ipynb`
 
 ### text_feat.npy
-Text embeddings generated using `bert.ipynb`
+This file contains text embeddings generated using `bert.ipynb`
 
 
-## Bechmarked Models
+## Benchmarked Models
 
 | **Model**       | **Paper**                                                                                             | **Conference/Journal** | **Code**    |
 |------------------|--------------------------------------------------------------------------------------------------------|------------------------|-------------|
