@@ -8,21 +8,15 @@ Go to 'mmrec_toolbox/src/'
 
 Use the command:
 
-'python main.py -m {MODEL_NAME} -d ml100k'
+    'python main.py -m {MODEL_NAME} -d ml100k'
 
 MODEL_NAME:
-
-    BM3
-
-    FREEDOM
-
-    DRAGON
-
-    LATTICE
-
-    MGCN
-
-    DualGNN
+- BM3
+- FREEDOM
+- DRAGON
+- LATTICE
+- MGCN
+- DualGNN
 
 
 ## Log files
